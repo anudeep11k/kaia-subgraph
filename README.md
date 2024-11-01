@@ -5,7 +5,7 @@ This tutorial demonstrates how to build a subgraph for Kaia blockchain data usin
 
 ## Prerequisites
 - **The Graph Studio account** (Sign up at [The Graph Studio](https://thegraph.com/studio))
-- **Kaia smart contract information** (contract address and ABI)
+- **Kaia smart contract information** (contract address and ABI) here i have used kaia docs fro ABI
 - **Graph CLI** (install via `yarn global add @graphprotocol/graph-cli`)
 
 ## Step-by-Step Guide
