@@ -1,3 +1,4 @@
+# kaia-wallet-tracker-subgraph
 A subgraph tutorial for tracking wallet transactions on Kaia blockchain using The Graph Studio
 # Creating a Subgraph for Kaia Blockchain using The Graph Studio
 
@@ -36,4 +37,37 @@ This tutorial demonstrates how to build a subgraph for Kaia blockchain data usin
      timestamp: BigInt!
      type: String! # e.g., "send", "receive"
    }
+
+
+
+
+### Step 3: Writing the Mapping Logic
+
+Add the mapping logic in `src/mapping.ts` to process `Transfer` events.
+
+```typescript
+import { Transfer } from "../generated/Token/Token"
+import { Account, Transaction } from "../generated/schema"
+
+export function handleTransaction(event: Transfer): void {
+  let transaction = new Transaction(event.transaction.hash.toHex())
+  transaction.from = event.params.from.toHex()
+  transaction.to = event.params.to.toHex()
+  transaction.value = event.params.value
+  transaction.timestamp = event.block.timestamp
+  transaction.type = "send"
+  transaction.save()
+}
 ```
+
+### Step 4: Deploying Your Subgraph
+
+To build and deploy your subgraph, follow these steps:
+
+1. **Install Project Dependencies**  
+   Install the necessary dependencies for your subgraph by running:
+   ```bash
+   yarn install
+   graph codegen
+   graph build
+
