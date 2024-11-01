@@ -17,7 +17,7 @@ This tutorial demonstrates how to build a subgraph for Kaia blockchain data usin
 2. Fill in the details for your subgraph, selecting the Kaia network.
 
    ![Subgraph Creation Form](images/image2.png)
-
+------------- from here its just an example-----------------
 ### Step 2: Define Your Subgraph Schema
 - Define the `Account` and `Transaction` entities in `schema.graphql` under the `subgraph/` folder.
 
