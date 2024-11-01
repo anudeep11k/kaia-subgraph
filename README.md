@@ -1,4 +1,3 @@
-# kaia-wallet-tracker-subgraph
 A subgraph tutorial for tracking wallet transactions on Kaia blockchain using The Graph Studio
 # Creating a Subgraph for Kaia Blockchain using The Graph Studio
 
@@ -71,3 +70,4 @@ To build and deploy your subgraph, follow these steps:
    graph codegen
    graph build
 
+Link for my Subgraph : https://thegraph.com/studio/subgraph/subgraph-kaia
